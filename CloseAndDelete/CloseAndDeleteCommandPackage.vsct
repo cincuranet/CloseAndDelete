@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Commands package="guidCloseAndDeleteCommandPackage">
+		<Groups>
+			<Group guid="guidCloseAndDeleteCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_FILE"/>
+			</Group>
+		</Groups>
+		<Buttons>
+			<Button guid="guidCloseAndDeleteCommandPackageCmdSet" id="CloseAndDeleteCommandId" priority="0x0100" type="Button">
+				<Parent guid="guidCloseAndDeleteCommandPackageCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Close and Delete Solution</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+	<KeyBindings>
+		<KeyBinding guid="guidCloseAndDeleteCommandPackageCmdSet" id="CloseAndDeleteCommandId" key1="4" mod1="ALT" mod2="ALT" key2="4" editor="guidVSStd97" />
+	</KeyBindings>
+	<Symbols>
+		<GuidSymbol name="guidCloseAndDeleteCommandPackage" value="{653ed5b1-beb3-447e-b3ba-72f5ccb222b9}" />
+		<GuidSymbol name="guidCloseAndDeleteCommandPackageCmdSet" value="{acff2309-824d-4bb9-b3d9-766f164d13e0}">
+			<IDSymbol name="MyMenuGroup" value="0x1020" />
+			<IDSymbol name="CloseAndDeleteCommandId" value="0x0100" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
