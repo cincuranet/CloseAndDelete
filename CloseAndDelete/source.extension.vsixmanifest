@@ -3,7 +3,7 @@
 	<Metadata>
 		<Identity Id="043f0d6f-f6e7-48f8-b996-da407ef474e6" Version="1.0" Language="en-US" Publisher="Jiri {x2} Cincura" />
 		<DisplayName>CloseAndDelete</DisplayName>
-		<Description xml:space="preserve">CloseAndDeleteCloseAndDelete</Description>
+		<Description xml:space="preserve">Closes current solution and deletes it from the disk. Useful when testing or prototyping something.</Description>
 		<Icon>Resources\CloseAndDeleteCommandPackage.ico</Icon>
 	</Metadata>
 	<Installation>
