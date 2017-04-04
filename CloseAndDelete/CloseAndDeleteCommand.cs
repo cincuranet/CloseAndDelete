@@ -67,7 +67,7 @@ namespace CloseAndDelete
             return VsShellUtilities.ShowMessageBox(
                 ServiceProvider,
                 message,
-                string.Empty,
+                "CloseAndDelete",
                 icon,
                 buttons,
                 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
