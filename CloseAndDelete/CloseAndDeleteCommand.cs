@@ -73,19 +73,26 @@ namespace CloseAndDelete
                 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
         }
 
-        static void DeleteDirectoryRetry(string directory)
+        void DeleteDirectoryRetry(string directory)
         {
-            var cnt = 0;
             while (true)
             {
                 try
                 {
-                    cnt++;
                     Directory.Delete(directory, true);
                     break;
                 }
-                catch (IOException) when (cnt < 3)
-                { }
+                catch (IOException ex)
+                {
+                    if (ShowMessage(ex.Message, OLEMSGICON.OLEMSGICON_WARNING, OLEMSGBUTTON.OLEMSGBUTTON_RETRYCANCEL) == (int)VSConstants.MessageBoxResult.IDRETRY)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             }
         }
     }
