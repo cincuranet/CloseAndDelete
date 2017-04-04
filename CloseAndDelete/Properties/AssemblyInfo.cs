@@ -6,5 +6,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("CloseAndDelete")]
 [assembly: AssemblyCopyright("Jiri {x2} Cincura")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1")]
+[assembly: AssemblyFileVersion("1.0.1")]
