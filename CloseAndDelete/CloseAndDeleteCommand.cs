@@ -1,11 +1,10 @@
 ﻿using System;
 using System.ComponentModel.Design;
-using System.Globalization;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio;
 using System.IO;
 using System.Threading;
+using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace CloseAndDelete
 {
@@ -32,9 +31,10 @@ namespace CloseAndDelete
 
 		IServiceProvider ServiceProvider => _package;
 
-		public static void Initialize(Package package)
+		public static System.Threading.Tasks.Task InitializeAsync(Package package)
 		{
 			Instance = new CloseAndDeleteCommand(package);
+			return System.Threading.Tasks.Task.CompletedTask;
 		}
 
 		void MenuItemCallback(object sender, EventArgs e)
